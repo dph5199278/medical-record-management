@@ -1,0 +1,9 @@
+logging:
+  file:
+    path: logs
+    name: com.log
+  level:
+    root: INFO
+    com:
+      dao: DEBUG
+      service: INFO

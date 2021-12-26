@@ -1,0 +1,44 @@
+spring:
+  profiles:
+    active: prod
+  mvc:
+    view:
+      prefix: /
+      suffix: .jsp
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/medical_record_management?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC
+    username: root
+    password: root
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 80MB
+      max-request-size: 90MB
+  main:
+    banner-mode: off
+
+mybatis:
+  configuration:
+    cache-enabled: true
+    log-impl: org.apache.ibatis.logging.log4j2.Log4j2Impl
+    map-underscore-to-camel-case: true
+    call-setters-on-nulls: true
+  mapper-locations:
+    - classpath*:com/mapper/*Mapper.xml
+  type-aliases-package: com.model
+
+server:
+  port: 9999
+  tomcat:
+    max-http-form-post-size: 100MB
+  servlet:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+
+logging:
+  charset:
+    console: UTF-8
+    file: UTF-8

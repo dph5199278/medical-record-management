@@ -1,0 +1,6 @@
+logging:
+  level:
+    root: TRACE
+    com:
+      dao: DEBUG
+      service: INFO
