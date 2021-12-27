@@ -9,6 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com</groupId>
+    <packaging>jar</packaging>
     <artifactId>medical-record-management</artifactId>
     <version>1.0.0</version>
     <name>medical-record-management</name>
@@ -147,6 +148,13 @@
             <resource>
                 <directory>src/main/resources</directory>
                 <filtering>false</filtering>
+            </resource>
+            <resource>
+                <directory>src/main/webapp</directory>
+                <filtering>false</filtering>
+                <excludes>
+                    <exclude>**/*.md</exclude>
+                </excludes>
             </resource>
             <resource>
                 <directory>src/main/java</directory>
