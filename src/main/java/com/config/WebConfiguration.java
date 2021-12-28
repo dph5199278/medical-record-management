@@ -45,6 +45,6 @@ public class WebConfiguration implements WebMvcConfigurer {
 
         // 以上或这个启用其一即可，这是直接使用失效的spring.mvc.view配置使其生效
         // 这两个都禁用后，spring.mvc.view配置自动生效
-        registry.jsp(webMvcProperties.getView().getPrefix(), webMvcProperties.getView().getSuffix()).viewClass(JstlView.class);
+        //registry.jsp(webMvcProperties.getView().getPrefix(), webMvcProperties.getView().getSuffix()).viewClass(JstlView.class);
     }
 }
