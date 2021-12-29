@@ -20,7 +20,7 @@
 
 1. 使用1.4.2.RELEASE 到 2.2.13.RELEASE，可用本路径下2.2.13.RELEASE\JarLauncher.class替换打包后的文件：\org\springframework\boot\loader\JarLauncher.class
 2. 使用2.3.0.RELEASE及以上，可用本路径下2.6.2\JarLauncher.class替换打包后的文件：\org\springframework\boot\loader\JarLauncher.class(测试到2.6.2版本可用)
-3. 不管使用哪个版本，将本路径下agent\jar-launcher.jar与打包后的jar放在同级目录下作为javaagent运行(测试到2.6.2版本可用)。例：java -javaagent:jar-launcher.jar -jar xxx.jar
+3. 不管使用哪个版本，将本路径下agent\jar-launcher.jar(分别提供java6版与java8版，以防止部分使用java6的无法使用此方法)与打包后的jar放在同级目录下作为javaagent运行(测试到2.6.2版本可用)。例：java -javaagent:jar-launcher.jar -jar xxx.jar
 4. 将JSP页面作为一个模块打包成jar，主项目再引入此依赖，这样即可解决这次提交造成的影响。
 
 本项目是用于学习以前JSP与Spring Boot打包插件的一些源码而创建，方便广大程序猿们研究以及迁移旧的传统项目。
